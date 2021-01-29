@@ -44,6 +44,6 @@ public class RobotContainer {
    */
   public Command getAutonomousCommand() {
     // An ExampleCommand will run in autonomous
-    return new DriveStraightCommand(this);
+    return new DriveStraightCommand(this).withTimeout(10);
   }
 }

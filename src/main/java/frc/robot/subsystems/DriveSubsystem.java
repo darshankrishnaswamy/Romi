@@ -21,6 +21,7 @@ public class DriveSubsystem extends SubsystemBase {
   public void drive(double left, double right){
     leftMotor.set(left);
     rightMotor.set(right);
+    rightMotor.setInverted(true);
   }
 
   public void stop(){
