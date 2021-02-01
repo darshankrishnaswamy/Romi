@@ -45,6 +45,6 @@ public class RobotContainer {
    */
   public Command getAutonomousCommand() {
     // An ExampleCommand will run in autonomous
-    return new TurnCommand(this, 180);
+    return new TurnCommand(this, 180).andThen(new DriveStraightCommand(this).withTimeout(5).then(new TurnCommand(this, 180)));
   }
 }
